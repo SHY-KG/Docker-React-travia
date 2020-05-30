@@ -7,3 +7,14 @@ before_install:
 
 script:
     - docker run -e CI=true shy-kg/docker-react-travia npm run test
+# deploy:
+#     provider: elasticbeanstalk
+#     region: "ap-northeast-1"
+#     app: { elasticbeanstalk-app-name }
+#     env: { elasticbeanstalk-app-env-name }
+#     bucket-name: { bucket-name for git repo file upload }
+#     bucket-path: { IN bukcet folder }
+#     on:
+#         branch: master
+#     access_key_id: $AWS_ACCESS_KEY
+#     secret_access_key: $AWS_SECRET_KEY
